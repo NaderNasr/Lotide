@@ -1,12 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    return `🟢🟢🟢 Assertion Passed: ${actual} === ${expected} `;
-  } else {
-    return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
-  }
-};
-
-
 const eqArrays = (firstArr, secondArr) => {
 
   if (firstArr === secondArr) return true;
@@ -20,4 +11,12 @@ const eqArrays = (firstArr, secondArr) => {
 
 };
 
-console.log(assertEqual(eqArrays([1, 2, 3], [1, "2", 3]), true));
+const assertArraysEqual = (firstArr, secondArr) => {
+  if (eqArrays(firstArr, secondArr)) {
+    return `🟢🟢🟢 Assertion Passed: ${firstArr} === ${secondArr} `;
+  } else {
+    return `🔴🔴🔴 Assertion Failed: ${firstArr} !== ${secondArr} `;
+  }
+};
+
+console.log(assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
