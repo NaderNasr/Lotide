@@ -8,8 +8,6 @@ const assertEqual = (actual, expected) => {
 
 
 const eqArrays = (firstArr, secondArr) => {
-  firstArr.sort((a,b) => a - b);
-  secondArr.sort((a,b) => a - b);
 
   if (firstArr === secondArr) return true;
   if (firstArr === null || secondArr === null) return false;
