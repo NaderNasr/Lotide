@@ -1,11 +1,11 @@
-const countLetters = (items) => {
-  let joined = items.split(' ').join('').toLowerCase();
+const countLetters = (string) => {
+  let joined = string.split(' ').join('').toLowerCase();
   let results = {};
-  for (let item of joined) {
-    if (results[item]) {
-      results[item] += 1;
+  for (let letters of joined) {
+    if (results[letters]) {
+      results[letters] += 1;
     } else {
-      results[item] = 1;
+      results[letters] = 1;
     }
   }
   return results;
