@@ -36,6 +36,13 @@ const eqObjects = (object1, object2) => {
   }
 };
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-console.log(eqObjects(ab, ba));// => true
+const assertObjectsEqual = (actual, expected) => {
+  const inspect = require('util').inspect; // fix [object Object] output
+  if (eqArrays(actual, expected)) {
+    return `🟢🟢🟢 Assertion Passed: ${inspect(actual)} === ${inspect(expected)} `;
+  } else {
+    return `🔴🔴🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)} `;
+  }
+};
+
+console.log(assertObjectsEqual({a:'3', b:'4'}, {a:'3', b:'4'}));
