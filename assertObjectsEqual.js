@@ -38,11 +38,11 @@ const eqObjects = (object1, object2) => {
 
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require('util').inspect; // fix [object Object] output
-  if (eqArrays(actual, expected)) {
+  if (eqObjects(actual, expected)) {
     return `🟢🟢🟢 Assertion Passed: ${inspect(actual)} === ${inspect(expected)} `;
-  } else {
-    return `🔴🔴🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)} `;
   }
+  return `🔴🔴🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)} `;
+  
 };
 
 console.log(assertObjectsEqual({a:'3', b:'4'}, {a:'3', b:'4'}));

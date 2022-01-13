@@ -1,9 +1,9 @@
 const assertEqual = (actual, expected) => {
   if (actual === expected) {
     return `🟢🟢🟢 Assertion Passed: ${actual} === ${expected} `;
-  } else {
-    return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
   }
+  return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
+  
 };
 
 const countOnly = (allItems, itemsToCount) => {
@@ -12,9 +12,9 @@ const countOnly = (allItems, itemsToCount) => {
     if (itemsToCount[item]) {
       if (results[item]) {
         results[item] += 1;
-      } else {
-        results[item] = 1;
       }
+      results[item] = 1;
+      
     }
   }
   return results;

@@ -4,9 +4,9 @@ const letterPosition = (sentence) => {
   for (let i = 0; i < letters.length; i++) {
     if (results[letters[i]]) {
       results[letters[i]].push(i);
-    } else {
-      results[letters[i]] = [i];
     }
+    results[letters[i]] = [i];
+    
   }
 
   return results;

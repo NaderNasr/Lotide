@@ -4,9 +4,9 @@ const countLetters = (string) => {
   for (let letters of joined) {
     if (results[letters]) {
       results[letters] += 1;
-    } else {
-      results[letters] = 1;
     }
+    results[letters] = 1;
+    
   }
   return results;
 };
