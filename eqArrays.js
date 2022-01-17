@@ -5,19 +5,17 @@ const assertEqual = (actual, expected) => {
   return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
   
 };
-
-
 const eqArrays = (firstArr, secondArr) => {
 
   if (firstArr === secondArr) return true;
   if (firstArr === null || secondArr === null) return false;
   if (firstArr.length !== secondArr.length) return false;
 
-  for (let i = 0; i < firstArr.length; ++i) {
+  for (let i = 0; i < firstArr.length; i++) {
     if (firstArr[i] !== secondArr[i]) return false;
   }
   return true;
 
 };
 
-console.log(assertEqual(eqArrays([1, 2, 3], [1, "2", 3]), true));
+module.exports = eqArrays;
