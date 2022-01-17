@@ -1,11 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    return `🟢🟢🟢 Assertion Passed: ${actual} === ${expected} `;
-  }
-  return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
-  
-};
-
 const countOnly = (allItems, itemsToCount) => {
   const results = {};
   for (const item of allItems) {
@@ -20,21 +12,33 @@ const countOnly = (allItems, itemsToCount) => {
   return results;
 };
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+module.exports = countOnly;
 
-console.log(assertEqual(result1["Jason"], 1));
-console.log(assertEqual(result1["Karima"], undefined));
-console.log(assertEqual(result1["Fang"], 2));
-console.log(assertEqual(result1["Agouhanna"], undefined));
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
+
+
+// const assertEqual = (actual, expected) => {
+//   if (actual === expected) {
+//     return `🟢🟢🟢 Assertion Passed: ${actual} === ${expected} `;
+//   }
+//   return `🔴🔴🔴 Assertion Failed: ${actual} !== ${expected} `;
+  
+// };
+
+// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+
+// console.log(assertEqual(result1["Jason"], 1));
+// console.log(assertEqual(result1["Karima"], undefined));
+// console.log(assertEqual(result1["Fang"], 2));
+// console.log(assertEqual(result1["Agouhanna"], undefined));

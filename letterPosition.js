@@ -12,5 +12,6 @@ const letterPosition = (sentence) => {
   return results;
 };
 
+module.exports = letterPosition;
 
-console.log(letterPosition('lighthouse labs'));
+// console.log(letterPosition('lighthouse labs'));

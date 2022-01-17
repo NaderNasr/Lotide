@@ -1,14 +1,4 @@
-const eqArrays = (firstArr, secondArr) => {
-  if (firstArr === secondArr) return true;
-  if (firstArr === null || secondArr === null) return false;
-  if (firstArr.length !== secondArr.length) return false;
-
-  for (let i = 0; i < firstArr.length; ++i) {
-    if (firstArr[i] !== secondArr[i]) return false;
-  }
-  return true;
-
-};
+const eqArrays = require('./eqArrays');
 
 const eqObjects = (object1, object2) => {
   let obj1 = Object.keys(object1);
@@ -37,8 +27,10 @@ const eqObjects = (object1, object2) => {
   
 };
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-const ca = {c: '3', a:'1'};
-console.log(eqObjects(ab, ba));// => true
-console.log(eqObjects(ab, ca));// => false
+module.exports = eqObjects;
+
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// const ca = {c: '3', a:'1'};
+// console.log(eqObjects(ab, ba));// => true
+// console.log(eqObjects(ab, ca));// => false
