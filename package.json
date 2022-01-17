@@ -1,6 +1,6 @@
 {
   "name": "@nnasr/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A _lodash clone repo",
   "main": "index.js",
   "directories": {
