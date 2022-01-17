@@ -2,7 +2,7 @@
   "name": "@nnasr/lotide",
   "version": "1.0.0",
   "description": "A _lodash clone repo",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
