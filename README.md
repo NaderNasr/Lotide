@@ -30,8 +30,10 @@ The following functions are currently implemented:
 * `head`: get the first element in an array
 * `tail`: get the last element in an array
 * `middle`: find the middle elements of an array
-* `without`: remove elements from an array
 * `findKey`: find keys in an object
+* `without`: remove elements from an array
+* `eqArrays`: compare if two arrays are equal
+* `eqObjects`: compare if two object are equal
 * `takeUntil`: take all the elements until a certain element
 * `countOnly`: count the amount of names in list
 * `assertEqual`: asserts if two values are equals
